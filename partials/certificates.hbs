@@ -1,0 +1,15 @@
+{{#if certificates}}
+<section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+        {{#each certificates}}
+        <li>
+            <strong>{{name}}</strong> – Issued by <em>{{issuer}}</em> on {{date}}
+            {{#if url}}
+            (<a href="{{url}}" target="_blank">View Certificate</a>)
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
