@@ -1,64 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-
-	<!--<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{basics.name}} - Resume</title>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
 
-	<div id="resume">
-		<div id="basics">
-			{{> basics}}
-		</div>
+    {{#if basics}}
+    {{> basics}}
+    {{/if}}
 
-		<div class="work">
-			{{> work}}
-		</div>
+    {{#if work}}
+    {{> work}}
+    {{/if}}
 
-		<div class="volunteer">
-			{{> volunteer}}
-		</div>
+    {{#if education}}
+    {{> education}}
+    {{/if}}
 
-		<div class="education">
-			{{> education}}
-		</div>
+    {{#if skills}}
+    {{> skills}}
+    {{/if}}
 
-		<div class="awards">
-			{{> awards}}
-		</div>
+    {{#if languages}}
+    {{> languages}}
+    {{/if}}
 
-		<div class="certificates">
-			{{> certificates}}
-		</div>
+    {{#if projects}}
+    {{> projects}}
+    {{/if}}
 
-		<div class="publications">
-			{{> publications}}
-		</div>
+    {{#if references}}
+    {{> references}}
+    {{/if}}
 
-		<div class="skills">
-			{{> skills}}
-		</div>
-
-		<div class="languages">
-			{{> languages}}
-		</div>
-
-		<div class="interests">
-			{{> interests}}
-		</div>
-
-		<div class="references">
-			{{> references}}
-		</div>
-
-		<div class="projects">
-			{{projects}}
-		</div>
-	</div>
 </body>
 </html>
