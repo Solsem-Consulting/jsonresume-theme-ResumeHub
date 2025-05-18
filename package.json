@@ -5,10 +5,19 @@
   "author": "Solsem Consulting",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Solsem-Consulting/jsonresume-theme-ResumeHub"
+    "url": "git+https://github.com/Solsem-Consulting/jsonresume-theme-ResumeHub.git"
   },
   "license": "MIT",
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4"
+    "handlebars": "^2.0.0-alpha.4",
+    "jsonresume-theme-resumehub-dot-no": "^0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Solsem-Consulting/jsonresume-theme-ResumeHub/issues"
+  },
+  "homepage": "https://github.com/Solsem-Consulting/jsonresume-theme-ResumeHub#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
