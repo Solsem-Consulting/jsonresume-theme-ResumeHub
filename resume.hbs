@@ -7,234 +7,63 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
-
-	<style>
-		{
-				{
-					{
-					css
-				}
-			}
-		}
-	</style>
-
 </head>
 
 <body>
 
 	<div id="resume">
-		<h1>{{basics.name}}</h1>
-		<h2>{{basics.label}}</h2>
-		<p>{{basics.summary}}</p>
+		<div id="basics">
+			{{> basics}}
+		</div>
 
-		<h3>Contact</h3>
-		<ul>
-			<li>Email: {{basics.email}}</li>
-			<li>Phone: {{basics.phone}}</li>
-			<li>Website: <a href="{{basics.url}}">{{basics.url}}</a></li>
-		</ul>
+		<div class="work">
+			{{> work}}
+		</div>">
 
-		<h3>Location</h3>
-		<p>{{basics.location.address}}, {{basics.location.city}}, {{basics.location.region}},
-			{{basics.location.countryCode}}, {{basics.location.postalCode}}</p>
-
-		<h3>Profiles</h3>
-		<ul>
-			{{#each basics.profiles}}
-			<li>{{network}}: <a href="{{url}}">{{username}}</a></li>
-			{{/each}}
-		</ul>
-
-		<div class="experience">
-			{{#if work}} 
-			<h3>Work Experience</h3>
-			<ul>
-				{{#each work}}
-				<li>
-					<h4>{{position}} at {{name}}</h4>
-					<p><strong>Location:</strong> {{location}}</p>
-					<p><strong>Start Date:</strong> {{startDate}}</p>
-					<p><strong>End Date:</strong> {{endDate}}</p>
-					<p>{{summary}}</p>
-					<ul>
-						{{#each highlights}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+		<div class="volunteer">
+			{{> volunteer}}
 		</div>">
 
 		<div class="education">
-			{{#if education}}
-			<h3>Education</h3>
-			<ul>
-				{{#each education}}
-				<li>
-					<h4>{{studyType}} in {{area}} - {{institution}}</h4>
-					<p><strong>Score:</strong> {{score}}</p>
-					<ul>
-						{{#each courses}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
-		</div>
-
-		<div> class="volunteer">
-			{{#if volunteer}}
-			<h3>Volunteer Experience</h3>
-			<ul>
-				{{#each volunteer}}
-				<li>
-					<h4>{{position}} at {{organization}}</h4>
-					<p><strong>Start Date:</strong> {{startDate}}</p>
-					<p><strong>End Date:</strong> {{endDate}}</p>
-					<p>{{summary}}</p>
-					<ul>
-						{{#each highlights}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
-		</div>
-
-
-		<div class=""></div>
+			{{> education}}
+		</div>">
 
 		<div class="awards">
-			{{#if awards}}
-			<h3>Awards</h3>
-			<ul>
-				{{#each awards}}
-				<li>
-					<h4>{{title}}</h4>
-					<p><strong>Awarded by:</strong> {{awarder}}</p>
-					<p><strong>Date:</strong> {{date}}</p>
-					<p>{{summary}}</p>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> awards}}
+		</div>
+
+		<div class="certificates">
+			{{> certificates}}
 		</div>
 
 		<div class="publications">
-			<h3>Publications</h3>
-			{{#if publications}}
-			<h3>Publications</h3>
-			<ul>
-				{{#each publications}}
-				<li>
-					<h4><a href="{{url}}">{{name}}</a></h4>
-					<p><strong>Published by:</strong> {{publisher}}</p>
-					<p><strong>Release Date:</strong> {{releaseDate}}</p>
-					<p>{{summary}}</p>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> publications}}
 		</div>
 
 		<div class="skills">
-			{{#if skills}}
-			<h3>Skills</h3>
-			<ul>
-				{{#each skills}}
-				<li>
-					<h4>{{name}} - {{level}}</h4>
-					<ul>
-						{{#each keywords}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> skills}}
 		</div>
 
 		<div class="languages">
-			{{#if languages}} 
-			<h3>Languages</h3>
-			<ul>
-				{{#each languages}}
-				<li>{{language}} - {{fluency}}</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> languages}}
 		</div>
 
-
 		<div class="interests">
-		{{#if interests	}} {{/if}}
-			<h3>Interests</h3>
-			<ul>
-				{{#each interests}}
-				<li>
-					<h4>{{name}}</h4>
-					<ul>
-						{{#each keywords}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> interests}}
 		</div>
 
 		<div class="references">
-			{{#if references}}
-			<h3>References</h3>
-			<ul>
-				{{#each references}}
-				<li>
-					<h4>{{name}}</h4>
-					<p>{{reference}}</p>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> references}}
 		</div>
 
 		<div class="projects">
-			{{#if projects}}
-			<h3>Projects</h3>
-			<ul>
-				{{#each projects}}
-				<li>
-					<h4><a href="{{url}}">{{name}}</a></h4>
-					<p><strong>Entity:</strong> {{entity}}</p>
-					<p><strong>Type:</strong> {{type}}</p>
-					<p>{{description}}</p>
-					<ul>
-						{{#each highlights}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-					<p><strong>Keywords:</strong> {{#each keywords}} {{this}}, {{/each}}</p>
-					<p><strong>Roles:</strong> {{#each roles}} {{this}}, {{/each}}</p>
-					<p><strong>Start Date:</strong> {{startDate}}</p>
-					<p><strong>End Date:</strong> {{endDate}}</p>
-				</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{> projects}}
 		</div>
 
 		<h3>Metadata</h3>
 		<p><strong>Canonical:</strong> <a href="{{meta.canonical}}">{{meta.canonical}}</a></p>
 		<p><strong>Version:</strong> {{meta.version}}</p>
 		<p><strong>Last Modified:</strong> {{meta.lastModified}}</p>
+	</div>
 </body>
-</div>
-
 </html>
