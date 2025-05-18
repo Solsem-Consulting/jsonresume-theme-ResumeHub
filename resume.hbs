@@ -7,17 +7,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
-
-	<style>
-		{
-				{
-					{
-					css
-				}
-			}
-		}
-	</style>
-
 </head>
 
 <body>
@@ -44,6 +33,7 @@
 			<li>{{network}}: <a href="{{url}}">{{username}}</a></li>
 			{{/each}}
 		</ul>
+		</div>
 
 		<div class="experience">
 			{{#if work}} 
@@ -235,6 +225,4 @@
 		<p><strong>Version:</strong> {{meta.version}}</p>
 		<p><strong>Last Modified:</strong> {{meta.lastModified}}</p>
 </body>
-</div>
-
 </html>
