@@ -6,3 +6,4 @@ resume.json
 .DS_Store
 /.vs
 /obj/Debug
+/public/index.html
