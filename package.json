@@ -9,8 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "handlebars": "^4.7.7",
-    "jsonresume-theme-resumehub-dot-no": "^0.0.1"
+    "handlebars": "^4.7.7"
   },
   "bugs": {
     "url": "https://github.com/Solsem-Consulting/jsonresume-theme-ResumeHub/issues"
