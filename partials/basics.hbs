@@ -3,10 +3,10 @@
 <h2>{{label}}</h2>
 <section id="basics">
     <div class="contact">
-        {{#if website}}
+        {{#if url}}
         <div class="website">
             <strong>Website | Nettside</strong>
-            {{website}}
+            {{url}}
         </div>
         {{/if}}
         {{#if email}}
@@ -62,6 +62,7 @@
         {{/if}}
     </section>
     {{/location}}
+    
     {{#if profiles.length}}
     <h3>Profiles | Profiler</h3>
     <section id="profiles">

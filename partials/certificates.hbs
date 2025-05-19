@@ -1,5 +1,29 @@
 {{#if resume.certificates.length}}
-<section id="certificates">
-    <h2>Certificates | Sertifikater</h2>
+<section id="projects">
+    <h2>Projects | Prosjekter</h2>
+    {{#each resume.certificates}}
+    <div class="item">
+        {{#if title}}
+        <div class="title">
+            {{name}}
+        </div>
+        {{/if}}
+        {{#if date}}
+    <div class="date">
+        {{date}}
+    </div>
+        {{/if}}
+        {{#if issuer}}
+    <div class="awarder">
+        {{issuer}}
+    </div>
+        {{/if}}
+        {{#if url}}
+        <div class="summary">
+            <a href="{{url}}">{{url}}</a>
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
 </section>
 {{/if}}
