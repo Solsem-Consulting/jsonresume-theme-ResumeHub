@@ -1,34 +1,39 @@
 {{#if resume.projects.length}}
 <section id="projects">
-    <h2>Projects | Prosjekter</h2>
+    <h2>Prosjekter</h2>
     {{#each resume.projects}}
-    <div class="item">
-        {{#if title}}
-        <div class="title">
-            {{name}}
-        </div>
-        {{/if}}
-        {{#if startdate}}
-        <div class="date">
-            {{startdate}}
-        </div>
-        {{/if}}
-        {{#if enddate}}
-        <div class="date">
-            {{enddate}}
-        </div>
-        {{/if}}
-        {{#if description}}
-        <div class="awarder">
-            {{description}}
-        </div>
-        {{/if}}
-        {{#if highlights}}
-        <div class="summary">
-            <p>{{highlights}}</p>
-        </div>
-        {{/if}}
+<div class="item">
+    {{#if entity}}
+    <div class="title">
+        {{entity}}
     </div>
+    {{/if}}
+    {{#if name}}
+    <div class="title">
+        {{name}}
+    </div>
+    {{/if}}
+    {{#if startdate}}
+    <div class="date">
+        {{startdate}}
+    </div>
+    {{/if}}
+    {{#if enddate}}
+    <div class="date">
+        {{enddate}}
+    </div>
+    {{/if}}
+    {{#if description}}
+    <div class="awarder">
+        {{description}}
+    </div>
+    {{/if}}
+    {{#if highlights}}
+    <div class="summary">
+        <p>{{highlights}}</p>
+    </div>
+    {{/if}}
+</div>
     {{/each}}
 </section>
 {{/if}}
