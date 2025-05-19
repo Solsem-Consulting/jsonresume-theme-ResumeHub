@@ -1,17 +1,5 @@
-{{#if projects}}
+{{#if resume.projects.length}}
 <section id="projects">
     <h2>Projects</h2>
-    {{#each projects}}
-    <div class="project">
-        <h3><a href="{{url}}" target="_blank">{{name}}</a></h3>
-        <p><strong>Duration:</strong> {{startDate}} - {{endDate}}</p>
-        <p>{{description}}</p>
-        <ul>
-            {{#each highlights}}
-            <li>{{this}}</li>
-            {{/each}}
-        </ul>
-    </div>
-    {{/each}}
 </section>
 {{/if}}
