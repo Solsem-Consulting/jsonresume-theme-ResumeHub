@@ -5,19 +5,19 @@
     <div class="contact">
         {{#if website}}
         <div class="website">
-            <strong>Website</strong>
+            <strong>Website | Nettside</strong>
             {{website}}
         </div>
         {{/if}}
         {{#if email}}
         <div class="email">
-            <strong>Email</strong>
+            <strong>Email | E-post</strong>
             {{email}}
         </div>
         {{/if}}
         {{#if phone}}
         <div class="phone">
-            <strong>Phone</strong>
+            <strong>Phone | Telefon</strong>
             {{phone}}
         </div>
         {{/if}}
@@ -28,42 +28,42 @@
     </div>
     {{/if}}
     {{#location}}
-    <h3>Location</h3>
+    <h3>Location | Sted</h3>
     <section id="location">
         {{#if address}}
         <div class="address">
-            <strong>Address</strong>
+            <strong>Address | Adresse</strong>
             {{address}}
         </div>
         {{/if}}
         {{#if postalCode}}
         <div class="postalCode">
-            <strong>Postal code</strong>
+            <strong>Postal code | Postnr</strong>
             {{postalCode}}
         </div>
         {{/if}}
         {{#if city}}
         <div class="city">
-            <strong>City</strong>
+            <strong>City | Poststed</strong>
             {{city}}
         </div>
         {{/if}}
         {{#if countryCode}}
         <div class="countryCode">
-            <strong>Country code</strong>
+            <strong>Country code | Landkode</strong>
             {{countryCode}}
         </div>
         {{/if}}
         {{#if region}}
         <div class="region">
-            <strong>Region</strong>
+            <strong>Region | Fylke</strong>
             {{region}}
         </div>
         {{/if}}
     </section>
     {{/location}}
     {{#if profiles.length}}
-    <h3>Profiles</h3>
+    <h3>Profiles | Profiler</h3>
     <section id="profiles">
         {{#each profiles}}
         <div class="item">

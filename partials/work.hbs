@@ -1,11 +1,11 @@
 {{#if resume.work.length}}
 <section id="work">
-	<h2>Work</h2>
+	<h2>Work | Arbeidserfaring</h2>
 	{{#each resume.work}}
 	<div class="item">
-		{{#if company}}
+		{{#if name}}
 		<h3 class="name">
-			{{company}}
+			{{name}}
 		</h3>
 		{{/if}}
 		<div class="date">
@@ -20,7 +20,7 @@
 			</span>
 			{{else}}
 			<span class="endDate">
-				- Present
+				- Present | Nåværende
 			</span>
 			{{/if}}
 		</div>
