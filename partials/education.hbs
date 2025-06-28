@@ -1,4 +1,4 @@
-{{#if resume.education.length}}
+ï»¿{{#if resume.education}}
 <section id="education">
 	<h2>Utdannelse</h2>
 	{{#each resume.education}}
@@ -15,7 +15,7 @@
 			</span>
 			{{else}}
 			<span class="endDate">
-				- Nåværende
+				- NÃ¥vÃ¦rende
 			</span>
 			{{/if}}
 		</div>
@@ -39,7 +39,7 @@
 			Snittkarakter: {{gpa}}
 		</div>
 		{{/if}}
-		{{#if courses.length}}
+		{{#if courses}}
 		<ul class="courses">
 			{{#each courses}}
 			<li>{{.}}</li>

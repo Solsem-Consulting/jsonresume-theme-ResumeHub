@@ -1,4 +1,4 @@
-{{#if resume.projects.length}}
+{{#if resume.projects}}
 <section id="projects">
     <h2>Prosjekter</h2>
     {{#each resume.projects}}
@@ -13,14 +13,14 @@
         {{name}}
     </div>
     {{/if}}
-    {{#if startdate}}
+    {{#if startDate}}
     <div class="date">
-        {{startdate}}
+        {{startDate}}
     </div>
     {{/if}}
-    {{#if enddate}}
+    {{#if endDate}}
     <div class="date">
-        {{enddate}}
+        {{endDate}}
     </div>
     {{/if}}
     {{#if description}}
@@ -29,9 +29,11 @@
     </div>
     {{/if}}
     {{#if highlights}}
-    <div class="summary">
-        <p>{{highlights}}</p>
-    </div>
+    <ul>
+        {{#each highlights}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
     {{/if}}
 </div>
     {{/each}}

@@ -1,4 +1,4 @@
-{{#if resume.work.length}}
+ï»¿{{#if resume.work}}
 <section id="work">
 	<h2>Arbeidserfaring</h2>
 	{{#each resume.work}}
@@ -20,7 +20,7 @@
 			</span>
 			{{else}}
 			<span class="endDate">
-				- Nåværende
+				- NÃ¥vÃ¦rende
 			</span>
 			{{/if}}
 		</div>
@@ -39,7 +39,7 @@
 			<p>{{summary}}</p>
 		</div>
 		{{/if}}
-		{{#if highlights.length}}
+		{{#if highlights}}
 		<ul class="highlights">
 			{{#each highlights}}
 			<li>{{.}}</li>

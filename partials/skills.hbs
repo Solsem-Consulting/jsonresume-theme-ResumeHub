@@ -1,4 +1,4 @@
-{{#if resume.skills.length}}
+{{#if resume.skills}}
 <section id="skills">
 	<h2>Ferdigheter</h2>
 	{{#each resume.skills}}
@@ -13,7 +13,7 @@
 			<em>{{level}}</em>
 		</div>
 		{{/if}}
-		{{#if keywords.length}}
+		{{#if keywords}}
 		<ul class="keywords">
 			{{#each keywords}}
 			<li>{{.}}</li>

@@ -27,4 +27,4 @@ function render(resume) {
 
 module.exports = {
 	render: render
-};
+}; 

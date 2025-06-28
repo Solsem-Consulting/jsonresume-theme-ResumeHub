@@ -1,4 +1,4 @@
-{{#if resume.volunteer.length}}
+ï»¿{{#if resume.volunteer}}
 <section id="volunteer">
 	<h2>Frivillighet</h2>
 	{{#each resume.volunteer}}
@@ -20,7 +20,7 @@
 			</span>
 			{{else}}
 			<span class="endDate">
-				- Nåværende
+				- NÃ¥vÃ¦rende
 			</span>
 			{{/if}}
 		</div>
@@ -39,7 +39,7 @@
 			<p>{{summary}}</p>
 		</div>
 		{{/if}}
-		{{#if highlights.length}}
+		{{#if highlights}}
 		<ul class="highlights">
 			{{#each highlights}}
 			<li>{{.}}</li>

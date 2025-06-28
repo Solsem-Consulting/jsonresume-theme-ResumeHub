@@ -1,29 +1,29 @@
-{{#if resume.certificates.length}}
-<section id="projects">
+{{#if resume.certificates}}
+<section id="certificates">
     <h2>Sertfiseringer</h2>
     {{#each resume.certificates}}
-    <div class="item">
-        {{#if title}}
-        <div class="title">
-            {{name}}
-        </div>
-        {{/if}}
-        {{#if date}}
+<div class="item">
+    {{#if name}}
+    <div class="title">
+        {{name}}
+    </div>
+    {{/if}}
+    {{#if date}}
     <div class="date">
         {{date}}
     </div>
-        {{/if}}
-        {{#if issuer}}
+    {{/if}}
+    {{#if issuer}}
     <div class="awarder">
         {{issuer}}
     </div>
-        {{/if}}
-        {{#if url}}
-        <div class="summary">
-            <a href="{{url}}">{{url}}</a>
-        </div>
-        {{/if}}
+    {{/if}}
+    {{#if url}}
+    <div class="summary">
+        <a href="{{url}}">{{url}}</a>
     </div>
+    {{/if}}
+</div>
     {{/each}}
 </section>
 {{/if}}
